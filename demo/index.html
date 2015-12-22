@@ -15,20 +15,25 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <title>athena-video Demo</title>
     <script src="../../webcomponentsjs/webcomponents.js"></script>
     <link rel="import" href="../athena-video.html">
-<!--
-     <link rel='import' href='../video-track.html'>
--->
   </head>
   <body unresolved>
 
-    <p>An example of <code>&lt;athena-video&gt;</code>:</p>
+    <p>An example of <code>&lt;vimeo-player&gt;</code>:</p>
+    <athena-video formats='["mp4"]'
+               width="480"
+               height="640"
+               poster="http://media.w3.org/2010/05/sintel/poster.png"
+               url="http://media.w3.org/2010/05/sintel/trailer">
+    </athena-video>
 
-    <athena-video
-      height='480'
-      width='640'
-      poster='http://media.w3.org/2010/05/sintel/poster.png'
-      formats='["mp4"]'
-      url="http://media.w3.org/2010/05/sintel/trailer"></athena-video>
+    <p>An example loading multiple formats</p>
+
+    <athena-video formats='["mp4", "webm", "ogg"]'
+               width="480"
+               height="640"
+               poster="http://media.w3.org/2010/05/sintel/poster.png"
+               url="http://media.w3.org/2010/05/sintel/trailer">
+    </athena-video>
 
   </body>
 </html>

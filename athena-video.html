@@ -7,7 +7,7 @@ The complete set of contributors may be found at http://polymer.github.io/CONTRI
 Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
-<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="bower_components/polymer/polymer.html">
 
 <!--
 This element wraps video attributes and elements for video content.
@@ -20,7 +20,7 @@ Example with a single format:
                width="480"
                height="640"
                poster="http://media.w3.org/2010/05/sintel/poster.png"
-               source="http://media.w3.org/2010/05/sintel/trailer">
+               url="http://media.w3.org/2010/05/sintel/trailer">
     </athena-video>
 
 Example with multiple formats:
@@ -29,7 +29,7 @@ Example with multiple formats:
                width="480"
                height="640"
                poster="http://media.w3.org/2010/05/sintel/poster.png"
-               source="http://media.w3.org/2010/05/sintel/trailer">
+               url="http://media.w3.org/2010/05/sintel/trailer">
     </athena-video>
 
 
@@ -99,3 +99,17 @@ Example with multiple formats:
 
 </script>
 </dom-module>
+
+<video width="640" height="360" controls>
+  <!-- MP4 must be first for iPad! -->
+  <source src="__VIDEO__.MP4" type="video/mp4" /><!-- Safari / iOS video    -->
+  <source src="__VIDEO__.OGV" type="video/ogg" /><!-- Firefox / Opera / Chrome10 -->
+  <!-- fallback to Flash: -->
+
+</video>
+<!-- you *must* offer a download link as they may be able to play the file locally. customise this bit all you want -->
+<p>	<strong>Download Video:</strong>
+  Closed Format:	<a href="__VIDEO__.MP4">"MP4"</a>
+  Open Format:	<a href="__VIDEO__.OGV">"Ogg"</a>
+</p>
+
